@@ -1,5 +1,4 @@
-﻿
-/*PACE.js Related*/
+﻿/*PACE.js Related*/
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
@@ -14,14 +13,14 @@
 }
 
 .pace .pace-progress {
-  /*background: #29d;*/
-  background: green;
+  background: #000 !important;
+  opacity: 0.5;
   position: fixed;
   z-index: 2000;
   top: 0;
   right: 100%;
   width: 100%;
-  height: 50px;
+  height: 56px;
 }
 
 /*site specifics*/

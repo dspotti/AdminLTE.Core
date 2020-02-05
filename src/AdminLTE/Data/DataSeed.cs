@@ -39,8 +39,8 @@ namespace AdminLTE.Data
                 //string userName = "SuperAdmin";
                 string firstName = "Super";
                 string lastName = "Admin";
-                string email = "superadmin@admin.com";
-                string password = "Qwaszx123$";
+                string email = "spotti@admin.com";
+                string password = "123456";
                 string role = "SuperAdmins";
                 string role2 = "SeniorManagers";
                 string role3 = "Managers";

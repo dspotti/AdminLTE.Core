@@ -1,3 +1,45 @@
-﻿<form asp-controller="Account" asp-action="LogOff" method="post">
-    <button class="btn btn-light">Sign out</button>
-</form>
+﻿<li class="nav-item dropdown">
+    <!-- Menu Toggle Button -->
+    <a class="nav-link" data-toggle="dropdown" href="#">
+        <!-- The user image in the navbar-->
+        <div class="image">
+            <img src="@User.GetUserProperty(CustomClaimTypes.AvatarURL)" class="menu-user-image img-circle elevation-1" alt="ui">
+        </div>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <!-- The user image in the menu -->
+        <li class="user-header">
+            <img src="@User.GetUserProperty(CustomClaimTypes.AvatarURL)" class="img-circle" alt="User Image">
+            <p>
+                @User.GetUserProperty(CustomClaimTypes.GivenName) @User.GetUserProperty(CustomClaimTypes.Surname)
+                @*<small>Registered since @User.GetUserProperty(CustomClaimTypes.DateRegistered)</small>*@
+            </p>
+        </li>
+        <!-- Menu Body -->
+        <li class="user-body hidden">
+            <div class="row">
+                <div class="col-xs-4 text-center">
+                    <a href="#">Followers</a>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <a href="#">Sales</a>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <a href="#">Friends</a>
+                </div>
+            </div>
+            <!-- /.row -->
+        </li>
+        <!-- Menu Footer-->
+        <li class="user-footer">
+            <div class="pull-left hidden">
+                <a href="#" class="btn btn-default btn-flat">Profile</a>
+            </div>
+            <div class="pull-right">
+                <form asp-controller="AccountAuthorization" asp-action="LogOff" method="post">
+                    <button type="submit" class="btn btn-black  btn-flat">Sign out</button>
+                </form>
+            </div>
+        </li>
+    </ul>
+</li>

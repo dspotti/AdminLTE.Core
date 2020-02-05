@@ -45,8 +45,14 @@ namespace AdminLTE
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
+            services.AddIdentity<ApplicationUser, IdentityRole>(opt =>
+                {
+                    opt.Password.RequireDigit = false;
+                    opt.Password.RequireNonAlphanumeric = false;
+                    opt.Password.RequireLowercase = false;
+                    opt.Password.RequireUppercase = false;
+                    opt.Password.RequiredLength = 4;
+                }).AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
             services.AddScoped<IUserClaimsPrincipalFactory<ApplicationUser>, AppClaimsPrincipalFactory>();

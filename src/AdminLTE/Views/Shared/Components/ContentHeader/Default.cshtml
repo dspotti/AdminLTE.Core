@@ -1,0 +1,11 @@
+﻿<div class="container-fluid">
+    <div class="row mb-2">
+        <div class="col-sm-6">
+            @await Component.InvokeAsync("PageHeader")
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+            @await Component.InvokeAsync("Breadcrumb")
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div>
+@await Component.InvokeAsync("PageAlert")
