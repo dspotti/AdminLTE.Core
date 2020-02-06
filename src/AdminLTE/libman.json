@@ -4,7 +4,7 @@
   "libraries": [
     {
       "provider": "jsdelivr",
-      "library": "admin-lte@3.0.0-beta.1",
+      "library": "admin-lte@3.0.2",
       "destination": "wwwroot/lib/admin-lte/",
       "files": [
         "dist/css/adminlte.css",

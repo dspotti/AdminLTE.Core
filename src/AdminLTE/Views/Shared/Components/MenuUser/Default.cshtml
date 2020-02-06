@@ -6,40 +6,22 @@
             <img src="@User.GetUserProperty(CustomClaimTypes.AvatarURL)" class="menu-user-image img-circle elevation-1" alt="ui">
         </div>
     </a>
-    <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-        <!-- The user image in the menu -->
-        <li class="user-header">
-            <img src="@User.GetUserProperty(CustomClaimTypes.AvatarURL)" class="img-circle" alt="User Image">
-            <p>
+    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <div class="dropdown-item" style="text-align: center !important;">
+            <!-- User Image -->
+            <img src="@User.GetUserProperty(CustomClaimTypes.AvatarURL)" alt="user Avatar" class="img-size-64 mt-2 img-circle" />
+
+            <h3 class="dropdown-item-title mt-1">
                 @User.GetUserProperty(CustomClaimTypes.GivenName) @User.GetUserProperty(CustomClaimTypes.Surname)
-                @*<small>Registered since @User.GetUserProperty(CustomClaimTypes.DateRegistered)</small>*@
-            </p>
-        </li>
-        <!-- Menu Body -->
-        <li class="user-body hidden">
-            <div class="row">
-                <div class="col-xs-4 text-center">
-                    <a href="#">Followers</a>
-                </div>
-                <div class="col-xs-4 text-center">
-                    <a href="#">Sales</a>
-                </div>
-                <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
-                </div>
-            </div>
-            <!-- /.row -->
-        </li>
-        <!-- Menu Footer-->
-        <li class="user-footer">
-            <div class="pull-left hidden">
-                <a href="#" class="btn btn-default btn-flat">Profile</a>
-            </div>
-            <div class="pull-right">
-                <form asp-controller="AccountAuthorization" asp-action="LogOff" method="post">
-                    <button type="submit" class="btn btn-black  btn-flat">Sign out</button>
-                </form>
-            </div>
-        </li>
-    </ul>
+            </h3>
+            <!-- The message -->
+            <p class="text-sm text-muted">@User.GetUserProperty(CustomClaimTypes.Email)</p>
+        </div>
+
+        <div class="dropdown-divider"></div>
+
+        <form asp-controller="Account" asp-action="LogOff" method="post">
+            <button type="submit" class="dropdown-item bg-light h6" style="text-align: left !important;"><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;&nbsp;Sair</button>
+        </form>
+    </div>
 </li>

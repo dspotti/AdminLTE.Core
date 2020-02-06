@@ -1,29 +1,32 @@
-﻿<div class="box">
-    <div class="box-body table-responsive">
-        <table class="table table-bordered table-hover" id="TableId" cellspacing="0" align="center">
-            <thead>
-                <tr>
-                    <th>Sr</th>
-                    <th>Order Track Number</th>
-                    <th>Quantity</th>
-                    <th>Product Name</th>
-                    <th>Special Offer</th>
-                    <th>Unit Price</th>
-                    <th>Unit Price Discount</th>
-                    <th>Options</th>
-                </tr>
-            </thead>
-        </table>
-    </div>
-</div>
-
-<div class="box">
-    <div class="box-body">
-        <form asp-controller="Home" asp-action="Index" method="post">
-            <button class="btn btn-sm btn-primary" type="submit">Submit</button>
-            <button class="btn btn-sm btn-primary" type="submit">Submit</button>
-            <button class="btn btn-sm btn-primary" type="submit">Submit</button>
-        </form>
+﻿<div class="row">
+    <div class="col-md-12">
+        <div class="card card-outline card-dark">
+            <div class="card-header">
+                <h5 class="card-title">Dashboard</h5>
+            </div>
+            <div class="card-body">
+                <table class="table table-responsive table-bordered table-hover table-striped" id="TableId" cellspacing="0" align="center">
+                    <thead>
+                        <tr>
+                            <th>Sr</th>
+                            <th>Order Track Number</th>
+                            <th>Quantity</th>
+                            <th>Product Name</th>
+                            <th>Special Offer</th>
+                            <th>Unit Price</th>
+                            <th>Unit Price Discount</th>
+                            <th>Options</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="card-footer">
+                <form asp-controller="Home" asp-action="Index" method="post">
+                    <button class="btn btn-sm btn-warning" type="submit">Submit</button>
+                    <button class="btn btn-sm btn-primary" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 
